@@ -3,3 +3,6 @@ node_modules
 media/profile_pictures/*
 db.sqlite3
 .env
+
+# Contentlayer
+.contentlayer

@@ -1,6 +1,6 @@
 ## Django Medical App
 
-This is a medical application to connect patients directly to doctors. It's a single page React website with a Django backend. Users can be either patients or doctors. Patients can request appointments using this and the doctors can accept or reject them.
+This is a medical application to connect patients directly to doctors. It's a single page React website with a Django backend. Users can be either patients or doctors. Patients can request appointments using this and the doctors can accept or reject them. As of this point, I think Postcss and Tailwind are installed in the project folder too but I am very uncertain if the installation was correct.
 
 ![UI on a PC](./desktop_screenshot.jpeg)
 \

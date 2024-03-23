@@ -61,6 +61,24 @@ body {
   color: white;
 }
 
+.button.primary {
+    background: linear-gradient(#e66465, #9198e5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.button.primary:hover {
+    background: linear-gradient(to right, #89CFF0, #1E90FF); 
+}
+
+
+
 .danger {
   background-color: $red;
 }
@@ -237,151 +255,153 @@ body {
 }
 
 #header {
-  display: flex;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 40px;
-  width: 100%;
-  padding: 10px 0;
-  justify-content: space-between;
-  margin-bottom: 10px;
-
-  #logoDiv {
-    flex-grow: 1;
-    // width: $left-element-width;
-    height: 100%;
-    border: none;
-    background: none;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: $left-element-margin-left;
-
-    #logoButton {
-      height: 40px;
-      width: 40px;
-      margin: 0 10px;
-      border-radius: 50%;
-      border: none;
-      background-color: white;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: $header-item-box-shadow;
-    }
-
-    #logoButton:hover {
-      cursor: pointer;
-      box-shadow: $header-item-hover-box-shadow;
-    }
-  }
-
-  @media (min-width: 600px) {
-    #navbar {
-      display: flex;
-    }
-
-    #navSelect {
-      display: none;
-    }
-  }
-
-  @media (max-width: 599px) {
-    #navbar {
-      display: none;
-    }
-
-    #navSelect {
-      display: flex;
-    }
-  }
-
-  #navbar,
-  #navSelect {
-    flex-grow: 1.5;
-    flex-direction: row;
-    overflow: hidden;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40px;
+    width: 100%;
+    padding: 10px 0;
     justify-content: space-between;
-    box-shadow: $standard-box-shadow;
-    border-radius: 10px;
-    height: 100%;
-    background-color: $foreground-color;
-  }
+    margin-bottom: 10px;
 
-  #navSelect {
-    padding: 5px 10px;
-    border: none;
-    text-align: center;
-  }
+    #logoDiv {
+        flex-grow: 1;
+        // width: $left-element-width;
+        height: 100%;
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: $left-element-margin-left;
 
-  #navSelect:focus {
-    outline: none;
-    box-shadow: inset 0 0 2px 2px $blue;
-  }
-
-  #navbar {
-    button {
-      margin: 10px 20px;
-      display: flex;
-      justify-content: space-around;
-      border-radius: 10px;
-      border: none;
-      background-color: inherit;
-    }
-
-    button:hover:not(.selected) {
-      cursor: pointer;
-      background-color: $button-hover-color;
-      box-shadow: $nav-button-select-box-shadow;
-    }
-
-    .selected {
-      background-color: $button-selected-color;
-      box-shadow: $nav-button-select-box-shadow;
-    }
-  }
-
-  #userDiv {
-    flex-grow: 1;
-    border: none;
-    background: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: $right-element-margin-right;
-    height: 100%;
-
-    #userButton {
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      border: none;
-      background-color: $standard-box-shadow-color;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 0 10px;
-      box-shadow: $header-item-box-shadow;
-
-      .profilePicture {
-        height: inherit;
-        width: inherit;
-        border-radius: 50%;
-        svg {
-          height: inherit;
-          width: inherit;
-          border-radius: 50%;
-          background-color: white;
+        #logoButton {
+            height: 40px;
+            width: 40px;
+            margin: 0 10px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: $header-item-box-shadow;
         }
-      }
+
+        #logoButton:hover {
+            cursor: pointer;
+            box-shadow: $header-item-hover-box-shadow;
+        }
     }
 
-    #userButton:hover {
-      cursor: pointer;
-      box-shadow: $header-item-hover-box-shadow;
+    @media (min-width: 600px) {
+        #navbar {
+            display: flex;
+        }
+
+        #navSelect {
+            display: none;
+        }
     }
-  }
+
+    @media (max-width: 599px) {
+        #navbar {
+            display: none;
+        }
+
+        #navSelect {
+            display: flex;
+        }
+    }
+
+    #navbar,
+    #navSelect {
+        flex-grow: 1.5;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        box-shadow: $standard-box-shadow;
+        border-radius: 10px;
+        height: 100%;
+        background-color: $foreground-color;
+    }
+
+    #navSelect {
+        padding: 5px 10px;
+        border: none;
+        text-align: center;
+    }
+
+    #navSelect:focus {
+        outline: none;
+        box-shadow: inset 0 0 2px 2px $blue;
+    }
+
+    #navbar {
+        button {
+            margin: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 10px;
+            border: none;
+            background-color: inherit;
+        }
+
+        button:hover:not(.selected) {
+            cursor: pointer;
+            background-color: $button-hover-color;
+            box-shadow: $nav-button-select-box-shadow;
+        }
+
+        .selected {
+            background-color: $button-selected-color;
+            box-shadow: $nav-button-select-box-shadow;
+        }
+    }
+
+    #userDiv {
+        flex-grow: 1;
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: $right-element-margin-right;
+        height: 100%;
+
+        #userButton {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: $standard-box-shadow-color;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 10px;
+            box-shadow: $header-item-box-shadow;
+
+            .profilePicture {
+                height: inherit;
+                width: inherit;
+                border-radius: 50%;
+
+                svg {
+                    height: inherit;
+                    width: inherit;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+            }
+        }
+
+        #userButton:hover {
+            cursor: pointer;
+            box-shadow: $header-item-hover-box-shadow;
+        }
+    }
 }
+
 
 #mainSection {
   width: 100%;

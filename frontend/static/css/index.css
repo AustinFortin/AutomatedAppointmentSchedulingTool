@@ -33,6 +33,23 @@ body {
   color: white;
 }
 
+.button.primary {
+  background: linear-gradient(to right, #ADD8E6, #0000FF); 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase; 
+  font-weight: bold;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.button.primary:hover {
+  background: linear-gradient(to right, #89CFF0, #1E90FF); 
+}
+
+
 .danger {
   background-color: #ffc3c3;
 }

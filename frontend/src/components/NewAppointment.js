@@ -4,6 +4,7 @@ import { getCookie } from '../utils/getCookie';
 import AnimatedLoaderIcon from '../icons/AnimatedLoaderIcon';
 import ErrorMessage from './ErrorMessage';
 
+
 export default function NewAppointment(props) {
     const [date, SetDate] = React.useState();
     const [requestTimeSlot, SetRequestTimeSlot] = React.useState();
@@ -37,7 +38,7 @@ export default function NewAppointment(props) {
                 }
             })
     }
-
+// className="button primary"
     return (
         <>
             <ProfilePicture url={props.doctorDetails.profile_picture_url} />
@@ -79,7 +80,9 @@ export default function NewAppointment(props) {
                         {errorMessage &&
                             <ErrorMessage message={errorMessage} dismissMessageHandler={() => { SetErrorMessage(null) }} />
                         }
-                        <button className="button primary" type="submit">Request Appointment</button>
+                        <button className="button primary"  type="submit">Request Appointment</button>
+                        <button className="button primary"  type="submit">Request Appointment with Voice Input</button>
+
                     </form>
                 </li>
             </ul>

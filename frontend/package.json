@@ -5,24 +5,32 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.x.x",
+    "@testing-library/react": "^11.x.x",
+    "@testing-library/user-event": "^12.x.x",
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "css-loader": "^6.10.0",
+    "jest": "^29.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "style-loader": "^3.3.4",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "react-calendar": "^4.8.0",
     "react-router-dom": "^5.3.0"
   }
 }

@@ -1,8 +1,10 @@
-import React from 'react'
-import ProfilePicture from './ProfilePicture'
+import React from 'react';
+import ProfilePicture from './ProfilePicture';
 import { getCookie } from '../utils/getCookie';
 import AnimatedLoaderIcon from '../icons/AnimatedLoaderIcon';
 import ErrorMessage from './ErrorMessage';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'; 
 
 export default function Appointment(props) {
     const [acceptedStartTime, SetAcceptedStartTime] = React.useState();
@@ -37,6 +39,7 @@ export default function Appointment(props) {
                 })
         }
     }
+
 
     function handleRejectAppointment() {
         SetIsLoading(true);

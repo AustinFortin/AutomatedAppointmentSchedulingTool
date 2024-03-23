@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from django.db import IntegrityError
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 import json
